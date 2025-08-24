@@ -30,7 +30,7 @@ TheraPose is a **demo physiotherapy application** that uses **AI Pose Estimation
 1. **Clone the repository**
 
    ```bash
-   git clone https://github.com/KwinyarutP/therapose.git
+   git clone [https://github.com/KwinyarutP/therapose.git](https://github.com/KwinyarutP/TheraPose.git)
    cd therapose-demo
    ```
 

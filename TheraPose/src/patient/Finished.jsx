@@ -1,5 +1,5 @@
 import React from "react";
-import { SectionTitle, Card, BigButton } from "../assets/ui";
+import { SectionTitle, Card, BigButton } from "../assets/ui2";
 
 export default function Finished({ go }) {
   return (

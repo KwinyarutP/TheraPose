@@ -15,7 +15,7 @@ export default function RegisterRole({ go }) {
         {/* Patient card */}
         <Card className="space-y-6 hover:border-blue-300 transition-colors">
           <div className="text-center space-y-3">
-            <div className="w-20 h-20 mx-auto bg-blue-100 rounded-2xl flex items-center justify-center mb-2">
+            <div className="w-20 h-20 mx-auto rounded-2xl flex items-center justify-center mb-2">
               <span className="text-3xl">🏥</span>
             </div>
             <h3 className="text-2xl font-semibold">I’m a Patient</h3>
@@ -38,7 +38,7 @@ export default function RegisterRole({ go }) {
         {/* Therapist card */}
         <Card className="space-y-6 hover:border-green-300 transition-colors">
           <div className="text-center space-y-3">
-            <div className="w-20 h-20 mx-auto bg-green-100 rounded-2xl flex items-center justify-center mb-2">
+            <div className="w-20 h-20 mx-auto rounded-2xl flex items-center justify-center mb-2">
               <span className="text-3xl">👩‍⚕️</span>
             </div>
             <h3 className="text-2xl font-semibold">I’m a Therapist</h3>

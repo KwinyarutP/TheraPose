@@ -56,10 +56,7 @@ export default function RegisterPatient({ go, formData, updateFormData }) {
 
         <div className="text-center text-sm text-gray-600">
           Already have an account?{" "}
-          <button
-            className="text-blue-600 hover:underline"
-            onClick={() => go("login")}
-          >
+          <button className="text-blue-600 hover:underline" onClick={() => go("login")}>
             Sign in
           </button>
         </div>

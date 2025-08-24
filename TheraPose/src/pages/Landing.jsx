@@ -20,10 +20,6 @@ export default function Landing({ go }) {
         <p className="hidden sm:block text-gray-500">
           Real‑time pose estimation brings personalized PT to your home
         </p>
-        <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center pt-2 md:pt-6">
-          <BigButton onClick={() => go("login")}>Get Started</BigButton>
-          <BigButton onClick={() => go("registerRole")} variant="secondary">Register for Free</BigButton>
-        </div>
       </div>
 
       <div className="flex justify-center">
@@ -38,13 +34,18 @@ export default function Landing({ go }) {
           { icon: "📊", title: "Progress Tracking", text: "Reports to track your recovery journey" },
         ].map((b, i) => (
           <Card key={i} className="text-center space-y-3 md:space-y-4">
-            <div className="w-14 h-14 md:w-16 md:h-16 mx-auto bg-blue-50 rounded-2xl flex items-center justify-center">
+            <div className="w-14 h-14 md:w-16 md:h-16 mx-auto rounded-2xl flex items-center justify-center">
               <span className="text-xl md:text-2xl">{b.icon}</span>
             </div>
             <h3 className="text-lg md:text-xl font-semibold">{b.title}</h3>
             <p className="text-gray-600 text-sm md:text-base">{b.text}</p>
           </Card>
         ))}
+      </div>
+      
+      <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center pt-2 md:pt-6">
+          <BigButton onClick={() => go("login")}>Get Started</BigButton>
+          <BigButton onClick={() => go("registerRole")}>Register for Free</BigButton>
       </div>
     </div>
   );

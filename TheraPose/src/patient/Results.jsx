@@ -1,5 +1,5 @@
 import React from "react";
-import { SectionTitle, Card, NavButton } from "../assets/ui";
+import { SectionTitle, Card, NavButton } from "../assets/ui2";
 
 export default function Results({ go }) {
   const results = [

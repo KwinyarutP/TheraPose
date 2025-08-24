@@ -10,13 +10,12 @@ export const Logo = () => (
   </div>
 );
 
+//useinfo
 export const Shell = ({ children, onNavigate }) => {
   const [open, setOpen] = useState(false);
 
   const NavLinks = ({ vertical = false }) => (
     <nav className={`flex ${vertical ? "flex-col gap-2" : "items-center gap-2"}`}>
-      <NavButton onClick={() => { onNavigate("login"); setOpen(false); }}>Log In</NavButton>
-      <NavButton onClick={() => { onNavigate("registerRole"); setOpen(false); }}>Register</NavButton>
       <NavButton onClick={() => { onNavigate("docs"); setOpen(false); }}>About Us</NavButton>
     </nav>
   );
@@ -74,27 +73,22 @@ export const Shell = ({ children, onNavigate }) => {
 };
 
 export const Card = ({ children, className = "" }) => (
-  <div className={`bg-white border border-gray-200 rounded-2xl shadow-sm p-4 md:p-6  transition-shadow ${className}`}>
+  <div className={`bg-white border border-gray-200 rounded-2xl shadow-sm p-4 md:p-6 hover:shadow-md transition-shadow ${className}`}>
     {children}
   </div>
 );
 
 export const BigButton = ({ children, onClick, variant = "primary", className = "" }) => {
   const base =
-    "w-full sm:w-auto inline-flex items-center justify-center rounded-2xl px-8 md:px-10 py-4 md:py-5 text-lg md:text-xl font-semibold shadow-lg transition-all duration-300 transform hover:scale-105 focus:outline-none";
-  
+    "w-full sm:w-auto inline-flex items-center justify-center rounded-2xl px-5 md:px-6 py-2.5 md:py-3 text-base md:text-lg font-semibold shadow-sm hover:shadow-md active:scale-[0.99] transition-all";
   const styles = {
-    primary: "bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700",
-    secondary: "bg-white text-gray-900 border border-gray-300 hover:bg-gray-50 shadow-md",
+    primary: "bg-blue-600 text-black border border-blue-600 hover:bg-blue-700",
+    secondary: "bg-white text-gray-900 border border-gray-300 hover:bg-gray-50",
   };
-
   return (
-    <button onClick={onClick} className={`${base} ${styles[variant]} ${className}`}>
-      {children}
-    </button>
+    <button onClick={onClick} className={`${base} ${styles[variant]} ${className}`}>{children}</button>
   );
 };
-
 
 export const NavButton = ({ children, onClick }) => (
   <button

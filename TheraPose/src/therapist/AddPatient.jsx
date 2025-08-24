@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { SectionTitle, Card, Field, BigButton } from "../assets/ui";
+import { SectionTitle, Card, Field, BigButton } from "../assets/ui2";
 
 export default function TherapistAddPatient({ go, patients, setPatients }) {
   const [newPatient, setNewPatient] = useState({

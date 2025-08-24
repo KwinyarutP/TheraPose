@@ -1,33 +1,38 @@
 # 🧘 TheraPose – AI-Powered Physiotherapy (Demo Product)
-TheraPose is a **demo product** that showcases an AI-powered physiotherapy application.  
+
+TheraPose is a **demo physiotherapy application** that uses **AI Pose Estimation** to guide and track physical therapy sessions. Patients can perform rehab at home with real-time feedback, while therapists can monitor progress remotely.
+
 ---
 
 ## ✨ Key Features
 
 ### 👤 Patient Flow
-- Register / Login as a patient
-- View assigned exercise programs
-- Exercise posture detail page
-- Camera session mock screen
-- Completed session summary
-- Progress & results dashboard
+
+* Register / Login as a patient
+* View assigned exercise programs
+* Exercise posture detail page
+* Camera session mock screen (pose detection demo)
+* Completed session summary
+* Progress & results dashboard
 
 ### 👩‍⚕️ Therapist Flow
-- Register / Login as a therapist
-- Dashboard with patient stats
-- Add new patients
-- View patient info & progress
-- Manage programs
+
+* Register / Login as a therapist
+* Dashboard with patient stats
+* Add new patients
+* View patient info & progress
+* Manage rehab programs
 
 ---
 
 ## 🔧 Installation & Setup
 
 1. **Clone the repository**
+
    ```bash
    git clone https://github.com/KwinyarutP/therapose.git
    cd therapose-demo
-````
+   ```
 
 2. **Install dependencies**
 
@@ -43,5 +48,6 @@ TheraPose is a **demo product** that showcases an AI-powered physiotherapy appli
 
 4. **Open the app**
 
-   * The app will be running at [http://localhost:5173]
+   * The app will be running at [http://localhost:5173](http://localhost:5173)
 
+---

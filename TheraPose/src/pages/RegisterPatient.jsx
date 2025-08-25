@@ -14,14 +14,14 @@ export default function RegisterPatient({ go, formData, updateFormData }) {
       <Card className="space-y-6 w-full">
         <Field
           label="Full Name"
-          placeholder="John Doe"
+          placeholder="Wiwis Poungsangthanakul"
           required
           value={formData.fullName}
           onChange={(e) => updateFormData("fullName", e.target.value)}
         />
         <Field
           label="Hospital Number (HN)"
-          placeholder="H123456 (optional)"
+          placeholder="H123456"
           value={formData.hn}
           onChange={(e) => updateFormData("hn", e.target.value)}
         />

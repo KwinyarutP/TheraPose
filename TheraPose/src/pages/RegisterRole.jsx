@@ -1,7 +1,7 @@
 import React from "react";
 import { SectionTitle, Card, BigButton } from "../assets/ui";
 
-export default function RegisterRole({ go }) {
+export default function RegisterRole({go}) {
   return (
     <div className="w-full space-y-8">
       {/* Header */}

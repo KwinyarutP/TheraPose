@@ -1,16 +1,25 @@
-import React from "react";
+import React, { useState } from "react";
 import { SectionTitle, Card, Field, BigButton } from "../assets/ui";
 
 export default function RegisterTherapist({ go, formData, updateFormData }) {
-  return (
-    <div className="w-full space-y-8">
-      {/* Header */}
-      <div className="text-center">
-        <SectionTitle>Therapist Registration</SectionTitle>
-        <p className="text-gray-600">Create your professional account</p>
-      </div>
+  const [error, setError] = useState("");
 
-      {/* Form */}
+  const submit = (e) => {
+    e.preventDefault();
+    setError("");
+
+    if (!formData.fullName?.trim()) return setError("Please enter your full name.");
+    if (!formData.licenseId?.trim()) return setError("Please enter your license ID.");
+    if (!formData.email?.trim()) return setError("Please enter your professional email.");
+    if (!formData.password?.trim() || formData.password.length < 6)
+      return setError("Password must be at least 6 characters.");
+
+    // success → go to therapist dashboard (demo)
+    go("therapistDash");
+  };
+
+  return (
+    <form onSubmit={submit} className="space-y-6">
       <Card className="space-y-6 w-full">
         <Field
           label="Full Name"
@@ -49,20 +58,25 @@ export default function RegisterTherapist({ go, formData, updateFormData }) {
           onChange={(e) => updateFormData("password", e.target.value)}
         />
 
-        <BigButton onClick={() => go("therapistDash")}>
-          Create Therapist Account
-        </BigButton>
+        {error && (
+          <div className="text-sm text-red-600 bg-red-50 border border-red-200 rounded-xl px-3 py-2">
+            {error}
+          </div>
+        )}
+
+        <div className="flex justify-center">
+          <BigButton type="submit" className="px-8 py-4 text-lg">
+            Create Therapist Account
+          </BigButton>
+        </div>
 
         <div className="text-center text-sm text-gray-600">
           Already have an account?{" "}
-          <button
-            className="text-blue-600 hover:underline"
-            onClick={() => go("login")}
-          >
+          <button className="text-gray-900 hover:underline" onClick={() => go("login")} type="button">
             Sign in
           </button>
         </div>
       </Card>
-    </div>
+    </form>
   );
 }

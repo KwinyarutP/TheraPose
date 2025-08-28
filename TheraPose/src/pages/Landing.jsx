@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import { Card } from "../assets/ui";
 
+
 /* tiny reveal-on-scroll helper */
 function Reveal({ children, className = "" }) {
   const ref = useRef(null);

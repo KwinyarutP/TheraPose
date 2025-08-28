@@ -1,5 +1,5 @@
 import React from "react";
-import { SectionTitle, Card, BigButton, NavButton } from "../assets/ui2";
+import { SectionTitle, Card, BigButton, NavButton } from "../assets/ui";
 
 export default function PatientInfo({ go, patients }) {
   const patient = patients[0]; // ตัวอย่าง เลือกผู้ป่วยแรก

@@ -28,7 +28,7 @@ export default function PatientProgramList({ go }) {
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 w-full">
         <Card>
           <div className="text-center">
-            <div className="text-2xl font-bold text-blue-600">3</div>
+            <div className="text-2xl font-bold taaext-blue-600">3</div>
             <div className="text-sm text-gray-600">Programs Assigned</div>
           </div>
         </Card>
@@ -67,11 +67,7 @@ export default function PatientProgramList({ go }) {
               >
                 {ex.completed ? "Completed" : "Pending"}
               </div>
-              <BigButton
-                onClick={() => go("patientPostureInfo")}
-                variant="secondary"
-                className="w-full sm:w-auto"
-              >
+              <BigButton onClick={() => go("patientPostureInfo")} variant="secondary" className="w-full sm:w-auto">
                 Start
               </BigButton>
             </div>

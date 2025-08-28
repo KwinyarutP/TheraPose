@@ -1,94 +1,91 @@
-import { Card, SectionTitle } from "../assets/ui";
-
-/* tiny local icon so you don't need a package */
-function CheckIcon(props) {
-  return (
-    <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" {...props}>
-      <path d="M16.707 5.293a1 1 0 0 1 0 1.414l-7.2 7.2a1 1 0 0 1-1.414 0l-3-3a1 1 0 1 1 1.414-1.414l2.293 2.293 6.493-6.493a1 1 0 0 1 1.414 0z" />
-    </svg>
-  );
-}
+import { SectionTitle } from "../assets/ui";
 
 export default function Docs() {
-  const bullets = [
-    "ติดตามมุมข้อต่อ ช่วงการเคลื่อนไหว (ROM) และจำนวนครั้ง",
-    "ปรับระดับความยากอัตโนมัติให้เหมาะกับความก้าวหน้าของแต่ละคน",
-    "แจ้งเตือนนัดฝึก + เกมมิฟิเคชัน เพิ่มแรงจูงใจทำต่อเนื่อง",
-    "แดชบอร์ดสำหรับนักกายภาพ เพื่อตรวจงานและปรับโปรแกรม",
-  ];
-
-  const chips = [
-    { k: "Sessions", v: "Real-time" },
-    { k: "Reports", v: "แชร์ทันที" },
-    { k: "Safety", v: "คำแนะนำท่าทาง" },
-  ];
-
   return (
-    <main className="w-full">
-      {/* Header */}
-      <header className="text-center space-y-3 mb-8 md:mb-12">
-        <SectionTitle>About Us</SectionTitle>
-        <p className="mx-auto text-gray-700 text-base md:text-lg max-w-3xl">
-          TheraPose คือแพลตฟอร์มกายภาพบำบัดที่บ้าน ใช้ AI Pose Estimation ประเมินท่าทางแบบเรียลไทม์
-          สร้างโปรแกรมเฉพาะบุคคล ปลอดภัย มีรายงานความคืบหน้าพร้อมแชร์ให้แพทย์/นักกายภาพได้ทันที
-        </p>
+    <main className="w-full bg-white relative overflow-hidden">
+      {/* subtle background pattern */}
+      <div className="pointer-events-none absolute inset-0 opacity-[0.06]">
+        <div className="h-full w-full bg-[radial-gradient(circle_at_1px_1px,black_1px,transparent_1.5px)] [background-size:18px_18px]" />
+      </div>
+
+      {/* HERO STRIP */}
+      <header className="relative mb-14 md:mb-16">
+        <div className=" flex justify-center text-white">
+          <div className=" justify-center mx-auto max-w-6xl px-6 md:px-8 py-10 md:py-12">
+            <SectionTitle className=" justify-center text-4xl md:text-5xl font-extrabold tracking-tight">
+              About Us
+            </SectionTitle>
+          </div>
+        </div>
+        <div className="h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent" />
+        {/* corner accents */}
+        <span className="pointer-events-none absolute -bottom-2 left-6 h-8 w-8 rounded-full border border-gray-200" />
+        <span className="pointer-events-none absolute -bottom-3 left-12 h-5 w-20 border-t border-gray-200" />
       </header>
 
-      {/* About Block */}
-      <section className="mx-auto max-w-6xl px-4">
-        <Card className="rounded-3xl border border-gray-200 bg-white shadow-lg overflow-hidden p-0">
-          {/* subtle top divider accent */}
-          <div className="h-0.5 w-full bg-gradient-to-r from-gray-900/80 via-gray-500/50 to-gray-900/80" />
+      {/* CONTENT */}
+      <section className="relative mx-auto max-w-6xl px-10 md:px-1">
+        <div className="grid md:grid-cols-2 gap-10 lg:gap-11 items-center">
+          {/* IMAGE */}
+          <figure className="relative order-1 overflow-hidden rounded-3xl border border-gray-200 shadow-[0_20px_60px_-20px_rgba(0,0,0,0.45)] bg-gray-100">
+            <img
+              src="/abt.png"
+              alt="Therapist assisting patient at home"
+              className="w-full h-full object-cover grayscale contrast-110 transition-[filter,transform] duration-700 ease-out will-change-transform hover:grayscale-0 hover:scale-[1.03]"
+              loading="eager"
+              decoding="async"
+            />
+            {/* soft vignette */}
+            <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent" />
+          </figure>
 
-          <div className="grid md:grid-cols-2">
-            {/* Image side */}
-            <figure className="relative bg-gray-100">
-              <img
-                src="/abt.png"
-                alt="Therapist assisting patient at home"
-                className="w-full h-full object-cover"
-                loading="eager"
-                decoding="async"
-              />
-            </figure>
-
-            {/* Text side */}
-            <div className="p-6 md:p-8 lg:p-10">
-              <h3 className="text-xl md:text-2xl font-semibold text-gray-900">TheraPose คืออะไร?</h3>
-
-              <p className="mt-3 text-gray-700 leading-relaxed">
-                เรานำคอมพิวเตอร์วิทัศน์มาช่วย “ดูท่าทาง” ด้วยกล้องของคุณแบบเรียลไทม์
-                เพื่อให้คำแนะนำที่ปลอดภัย สร้างแผนเฉพาะบุคคล และติดตามผลลัพธ์ได้จริง—ไม่ใช่แค่เช็กลิสต์
+          {/* TEXT */}
+          <div className="relative order-2">
+            {/* glass card */}
+            <div className="rounded-3xl border border-gray-200/70 bg-white/70 backdrop-blur-md shadow-[0_10px_40px_-20px_rgba(0,0,0,0.5)] p-6 md:p-8 lg:p-10">
+              <p className="text-gray-700 text-lg md:text-xl leading-relaxed antialiased">
+                TheraPose คือแพลตฟอร์มกายภาพบำบัดที่บ้าน ใช้{" "}
+                <span className="font-semibold text-gray-900">AI Pose Estimation</span>{" "}
+                ประเมินท่าทางแบบเรียลไทม์ ปรับโปรแกรมตามอาการเฉพาะบุคคล
+                พร้อมรายงานความคืบหน้าที่แชร์กับแพทย์/นักกายภาพได้ทันที
+                ทำให้ผู้ป่วยมั่นใจ ปลอดภัย และมีแรงจูงใจในการฟื้นฟูอย่างต่อเนื่อง
               </p>
 
-              {/* Bullets */}
-              <ul className="mt-5 space-y-3">
-                {bullets.map((b, i) => (
-                  <li key={i} className="flex items-start gap-3 text-gray-800">
-                    <span className="mt-1 text-gray-900">
-                      <CheckIcon className="h-5 w-5" />
-                    </span>
-                    <span className="leading-relaxed">{b}</span>
-                  </li>
-                ))}
+              <ul className="mt-8 space-y-4 text-gray-800 text-base md:text-lg">
+                <li className="group flex items-start gap-3">
+                  <span className="mt-1 inline-flex h-5 w-5 items-center justify-center rounded-full border border-gray-400 text-[11px] text-gray-700 transition group-hover:bg-gray-900 group-hover:text-white">
+                    ✓
+                  </span>
+                  <span className="leading-relaxed">
+                    ประเมินท่าทางอัตโนมัติ ลด Human Error
+                  </span>
+                </li>
+                <li className="group flex items-start gap-3">
+                  <span className="mt-1 inline-flex h-5 w-5 items-center justify-center rounded-full border border-gray-400 text-[11px] text-gray-700 transition group-hover:bg-gray-900 group-hover:text-white">
+                    ✓
+                  </span>
+                  <span className="leading-relaxed">
+                    ติดตามผลและแชร์รายงานกับแพทย์/นักกายภาพ
+                  </span>
+                </li>
               </ul>
 
-              {/* Stats chips */}
-              <div className="mt-6 grid grid-cols-2 sm:grid-cols-3 gap-3">
-                {chips.map((c, i) => (
-                  <div
-                    key={i}
-                    className="rounded-xl border border-gray-200 bg-white px-4 py-3 text-center shadow-sm"
-                  >
-                    <div className="text-xs text-gray-500">{c.k}</div>
-                    <div className="text-sm font-semibold text-gray-900">{c.v}</div>
-                  </div>
-                ))}
+              <div className="mt-8 h-px bg-gradient-to-r from-gray-200 via-gray-300 to-gray-200" />
+              {/* tiny version tag spot (empty—style only) */}
+              <div className="mt-4 flex justify-end">
+                <span className="rounded-md border border-gray-200 bg-gray-50 px-2 py-0.5 text-xs text-gray-500">
+                  {/* v0.1 */}
+                </span>
               </div>
-
             </div>
+
+            {/* side accent line */}
+            <div className="pointer-events-none absolute -left-6 top-6 bottom-6 hidden md:block w-px bg-gradient-to-b from-gray-300 via-gray-200 to-gray-300" />
           </div>
-        </Card>
+        </div>
+
+        {/* bottom breathing room */}
+        <div className="pb-14" />
       </section>
     </main>
   );

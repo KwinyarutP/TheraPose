@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Card, SectionTitle, NavButton } from "../assets/ui";
+import { Card, SectionTitle, NavButton, BigButton } from "../assets/ui";
 import RegisterTherapist from "./RegisterTherapist";
 import RegisterPatient from "./RegisterPatient";
 
@@ -79,12 +79,12 @@ export default function RegisterRole({ go }) {
                 </div>
 
                 <div className="text-center">
-                  <button
+                  < BigButton 
                     className="rounded-2xl border border-gray-300 px-5 py-3 text-sm font-semibold hover:bg-gray-50"
                     onClick={() => go("login")}
                   >
                     Already have an account?
-                  </button>
+                  </BigButton>
                 </div>
               </div>
             )}

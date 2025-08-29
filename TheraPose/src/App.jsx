@@ -8,7 +8,6 @@ import RegisterRole from "./pages/RegisterRole";
 import RegisterPatient from "./pages/RegisterPatient";
 import RegisterTherapist from "./pages/RegisterTherapist";
 import Docs from "./pages/Docs";
-import TargetUsers from "./pages/TargetUsers";
 
 // Patient screens
 import PatientProgramList from "./patient/ProgramList";
@@ -71,7 +70,6 @@ export default function App() {
       {route === screens.results && <Results go={go} />}
 
       {route === screens.docs && <Docs />}
-      {route === screens.targetUsers && <TargetUsers />}
     </Shell>
   );
 }

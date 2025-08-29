@@ -2,7 +2,14 @@
 
 TheraPose is a **demo physiotherapy application** that uses **AI Pose Estimation** to guide and track physical therapy sessions. Patients can perform rehab at home with real-time feedback, while therapists can monitor progress remotely.
 
-🌐 **Live Demo (Vercel Hosted)**: [https://thera-pose.vercel.app](https://thera-pose.vercel.app)
+**Live Demo (Vercel Hosted)**: [https://thera-pose.vercel.app](https://thera-pose.vercel.app) 
+- **⚠️ Important:** Please use **Light Mode only** (Currently, Dark Mode is may not supported and might cause display issues)
+- Best viewed on **Google Chrome** or **Microsoft Edge**
+- **Login required** for exploring entire the demo flows  
+- **Patient and Therapist** flows can be tested directly through the web interface by using username and password in the following 
+   * **Username: patient@mail.com, Password: demo123**
+   * **Username: therapist@mail.com, Password: demo123**
+     
 ---
 
 ## ✨ Key Features
@@ -60,10 +67,13 @@ Simply open the live deployment in your browser:
 
 👉 [https://thera-pose.vercel.app](https://thera-pose.vercel.app)
 
+- **⚠️ Important:** Please use **Light Mode only** (Dark Mode is not supported and may cause display issues)  
 - Works on **desktop** and **mobile browsers**  
-- Best viewed on **Google Chrome** or **Microsoft Edge**  
-- No login required for exploring the demo flows  
-- Patient and Therapist flows can be tested directly through the web interface
+- Best viewed on **Google Chrome** or **Microsoft Edge**
+- Login required for exploring entire the demo flows  
+- Patient and Therapist flows can be tested directly through the web interface by using username and password in the following 
+   - Username: patient@mail.com, Password: demo123
+   - Username: therapist@mail.com, Password: demo123
   
 ---
    

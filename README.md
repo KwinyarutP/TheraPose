@@ -66,50 +66,42 @@ You don’t need to install anything locally if you just want to try the demo.
 Simply open the live deployment in your browser:
 
 👉 [https://thera-pose.vercel.app](https://thera-pose.vercel.app)
-
-- **⚠️ Important:** Please use **Light Mode only** (Dark Mode is not supported and may cause display issues)  
-- Works on **desktop** and **mobile browsers**  
-- Best viewed on **Google Chrome** or **Microsoft Edge**
-- Login required for exploring entire the demo flows  
-- Patient and Therapist flows can be tested directly through the web interface by using username and password in the following 
-   - Username: patient@mail.com, Password: demo123
-   - Username: therapist@mail.com, Password: demo123
   
 ---
    
-   ## 🚀 Deployment on Vercel
+## 🚀 Deployment on Vercel
    
-   TheraPose can be easily deployed to **Vercel** for free hosting with automatic CI/CD.
+TheraPose can be easily deployed to **Vercel** for free hosting with automatic CI/CD.
    
-   ### 1. **Push to GitHub**
+### 1. **Push to GitHub**
    
-   Make sure your project is committed and pushed to a GitHub repository.
+Make sure your project is committed and pushed to a GitHub repository.
    
-   ### 2. **Import into Vercel**
+### 2. **Import into Vercel**
    
-   * Go to [Vercel Dashboard](https://vercel.com/)
-   * Click **New Project** → **Import GitHub Repo**
-   * Select your **TheraPose** repository
+* Go to [Vercel Dashboard](https://vercel.com/)
+* Click **New Project** → **Import GitHub Repo**
+* Select your **TheraPose** repository
    
-   ### 3. **Configure Build Settings**
+### 3. **Configure Build Settings**
    
-   * **Framework Preset**: `Vite`
-   * **Build Command**:
+* **Framework Preset**: `Vite`
+* **Build Command**:
    
-     ```bash
-     npm run build
-     ```
-   * **Output Directory**:
+  ```bash
+  npm run build
+  ```
+* **Output Directory**:
    
-     ```
-     dist
-     ```
+  ```
+  dist
+  ```
    
-   ### 4. **Deploy**
+### 4. **Deploy**
    
-   * Click **Deploy** and wait for the build to finish.
-   * Vercel will give you a live URL (like [https://thera-pose.vercel.app](https://thera-pose.vercel.app)).
+* Click **Deploy** and wait for the build to finish.
+* Vercel will give you a live URL (like [https://thera-pose.vercel.app](https://thera-pose.vercel.app)).
    
-   ### 5. **Automatic Updates**
+### 5. **Automatic Updates**
    
-   Every time you push new commits to GitHub, Vercel will automatically rebuild and deploy the latest version.
+Every time you push new commits to GitHub, Vercel will automatically rebuild and deploy the latest version.
